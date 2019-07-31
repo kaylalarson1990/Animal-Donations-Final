@@ -12,6 +12,7 @@ import {
 } from "./actions/index";
 import AnimalContainer from "./AnimalContainer/AnimalContainer";
 import DonationsContainer from "./DonationsContainer/DonationsContainer";
+import Form from "./Form/Form";
 
 class App extends Component {
   componentDidMount() {
@@ -26,11 +27,35 @@ class App extends Component {
       .catch(error => hasErrored(error.message));
   }
 
+  postDonations = donation => {
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(donation)
+    };
+    fetch("http://localhost:3001/api/v1/donations", options)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response);
+        } else {
+          return response.json();
+        }
+      })
+      .then(newDonation =>
+        this.props.addDonations([...this.props.donations, newDonation])
+      )
+      .then(this.props.loadComplete())
+      .catch(error => hasErrored(error.message));
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h2>Animal Rescue</h2>
+          <Form postDonations={this.postDonations} />
         </header>
         <aside>
           <DonationsContainer />
