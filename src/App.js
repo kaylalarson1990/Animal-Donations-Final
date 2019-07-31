@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "./App.css";
 import { getAnimals, getDonations } from "./apiCalls/apiCalls";
 import {
@@ -11,6 +11,7 @@ import {
   hasErrored
 } from "./actions/index";
 import AnimalContainer from "./AnimalContainer/AnimalContainer";
+import DonationsContainer from "./DonationsContainer/DonationsContainer";
 
 class App extends Component {
   componentDidMount() {
@@ -31,6 +32,9 @@ class App extends Component {
         <header className="App-header">
           <h2>Animal Rescue</h2>
         </header>
+        <aside>
+          <DonationsContainer />
+        </aside>
         <main>
           <AnimalContainer />
         </main>
@@ -64,7 +68,7 @@ App.propTypes = {
   setDonations: PropTypes.func,
   loadComplete: PropTypes.func,
   hasErrored: PropTypes.func
-}
+};
 
 export default connect(
   mapStateToProps,
