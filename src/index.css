@@ -42,6 +42,10 @@ main {
   text-align: center;
 }
 
+span.species {
+  font-weight: 600;
+}
+
 p {
   font-size: 22px;
   margin: 5px;
