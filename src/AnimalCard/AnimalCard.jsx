@@ -7,9 +7,11 @@ class AnimalCard extends Component {
     return (
       <article className="card">
         <img className="card-img" src={img} alt={`${name} image`} />
-        <p className="name">{name}</p>
-        <p className="species">{species}</p>
-        <p className="description">{description}</p>
+        <div className="card-detail">
+          <p className="name">{name}</p>
+          <p className="species">{species}</p>
+          <p className="description">{description}</p>
+        </div>
       </article>
     );
   }
