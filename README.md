@@ -2,6 +2,12 @@
 
 Animal Donations was a Mod 3 final project done in 3 hours. I was given two API's to fetch from - GET and POST were required. Needed to use GET to pull from the animal data and display that on the page. Needed to use POST to be able to submit a new donation.
 
+Technologies used:
+
+* React
+* Redux
+* Asynchronous Javascript
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Screenshot:
