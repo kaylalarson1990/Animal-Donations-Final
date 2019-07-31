@@ -12,4 +12,9 @@ const DonationsCard = ({ name, donation }) => {
   );
 };
 
+DonationsCard.propTypes = {
+    name: PropTypes.string,
+    donation: PropTypes.number
+}
+
 export default DonationsCard;
