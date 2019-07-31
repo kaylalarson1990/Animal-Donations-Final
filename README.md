@@ -29,8 +29,8 @@ I had a hard time with the donation form - I was able to get the donations to pe
 ## Setup:
 
 * git clone https://github.com/kaylalarson1990/Animal-Donations-Final.git
-* CD into the directory.
-* Run npm install
+* CD into directory created.
+* Run npm install.
 * Run npm start.
 
 
