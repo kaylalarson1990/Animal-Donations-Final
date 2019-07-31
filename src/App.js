@@ -57,10 +57,8 @@ class App extends Component {
           <h2>Animal Rescue</h2>
           <Form postDonations={this.postDonations} />
         </header>
-        <aside>
-          <DonationsContainer />
-        </aside>
         <main>
+        <DonationsContainer />
           <AnimalContainer />
         </main>
       </div>
