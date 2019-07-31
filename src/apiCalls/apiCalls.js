@@ -21,3 +21,4 @@ export const getDonations = () => {
     })
     .catch(error => Error("Error fetching donation data"));
 };
+

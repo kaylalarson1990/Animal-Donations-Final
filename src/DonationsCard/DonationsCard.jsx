@@ -5,9 +5,8 @@ const DonationsCard = ({ name, donation }) => {
   return (
     <section className="donation-card">
       <p>
-        <span className="title">{name} </span> recently donated:
+        <span className="title">{name} </span> recently donated: ${donation}
       </p>
-      <p className="title">{donation} dollars</p>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import AnimalCard from "../AnimalCard/AnimalCard";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class AnimalContainer extends Component {
   render() {
@@ -18,7 +18,7 @@ const mapStateToProps = state => ({
 });
 
 AnimalContainer.propTypes = {
-    animals: PropTypes.array
-  };
+  animals: PropTypes.array
+};
 
 export default connect(mapStateToProps)(AnimalContainer);
