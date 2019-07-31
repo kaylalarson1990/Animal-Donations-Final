@@ -25,7 +25,7 @@ main {
   background-color: white;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px grey;
-  height: auto;
+  height: 550px;
   margin: 10px;
   width: 350px;
 }
@@ -60,6 +60,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 10px;
 }
 
 .donation-card {
