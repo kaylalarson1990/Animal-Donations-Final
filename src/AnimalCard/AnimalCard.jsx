@@ -9,7 +9,7 @@ class AnimalCard extends Component {
         <img className="card-img" src={img} alt={`${name} image`} />
         <div className="card-detail">
           <p className="name">{name}</p>
-          <p className="species">{species}</p>
+          <p className="species"><span className="species">Species:</span> {species}</p>
           <p className="description">{description}</p>
         </div>
       </article>
