@@ -8,7 +8,7 @@ body {
 }
 
 .card {
-  border: 1px solid black;
+  box-shadow: 2px 2px 2px 2px grey;
   height: auto;
   margin: 10px;
   width: 300px;
@@ -16,9 +16,43 @@ body {
 
 .card-img {
   width: 300px;
+  height: 200px;
 }
 
 .animal-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.donation-card {
+  border: 1px solid grey;
+  box-shadow: 2px 2px grey;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+h2 {
+  margin: 20px;
+}
+
+input {
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+  width: 20%;
+}
+
+button {
+  background-color: #0599ff;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 20%;
 }
