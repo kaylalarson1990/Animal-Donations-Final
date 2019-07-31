@@ -1,32 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 .App-header {
-  background-image: url('https://www.freewebheaders.com/wp-content/gallery/wildlife/elephants-in-the-distance-sunset-landscape-website-header.jpg');
+  background-image: url("https://www.freewebheaders.com/wp-content/gallery/wildlife/elephants-in-the-distance-sunset-landscape-website-header.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 300px;
+  height: 350px;
 }
 
 body {
   margin: 0;
-  font-family: 'Open Sans';
+  font-family: "Darker Grotesque";
 }
 
 main {
   display: flex;
+  background-color: #f6f7f7;
 }
 
 .card {
+  background-color: white;
+  border-radius: 5px;
   box-shadow: 2px 2px 2px 2px grey;
   height: auto;
   margin: 10px;
-  width: 300px;
+  width: 350px;
 }
 
 .card-img {
-  width: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 350px;
   height: 200px;
 }
 
@@ -35,8 +42,13 @@ main {
   text-align: center;
 }
 
+p {
+  font-size: 22px;
+  margin: 5px;
+}
+
 .name {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -47,7 +59,9 @@ main {
 }
 
 .donation-card {
+  background-color: white;
   border: 1px solid grey;
+  border-radius: 5px;
   box-shadow: 2px 2px grey;
   margin: 10px;
   padding: 10px;
@@ -74,25 +88,25 @@ form {
 
 h2 {
   color: white;
-  font-size: 48px;
-  margin: 0 20px;
+  font-size: 60px;
+  margin: 0 30px;
 }
 
 input {
   border: 1px solid grey;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 16px;
   margin: 15px;
   padding: 12px;
   width: 20%;
 }
 
 button {
-  background-color: #0599ff;
+  background-color: #68B766;
   border: none;
   border-radius: 10px;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   margin: 15px;
   padding: 10px;
   width: 20%;
@@ -103,4 +117,8 @@ button {
   font-size: 30px;
   font-weight: 300;
   text-decoration: underline;
+}
+
+.donation-amt {
+  font-weight: 600;
 }

@@ -18,8 +18,8 @@ class Form extends Component {
   submitDonation = event => {
     event.preventDefault();
     const newDonation = {
-      id: Date.now(),
-      ...this.state
+      ...this.state,
+      id: Date.now()
     };
     this.props.postDonations(newDonation);
     this.clearInputs();

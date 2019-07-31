@@ -7,7 +7,7 @@ class DonationsContainer extends Component {
   render() {
     const { donations } = this.props;
     const displayDonations = donations.map(donation => (
-      <DonationsCard {...donation} key={donation.id} />
+      <DonationsCard {...donation} name={donation.name} donation={donation.donation} key={donation.id} />
     ));
     return (
       <aside>
