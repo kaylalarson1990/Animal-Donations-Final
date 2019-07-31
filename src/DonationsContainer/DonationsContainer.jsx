@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import DonationsCard from "../DonationsCard/DonationsCard";
 
@@ -10,7 +10,10 @@ class DonationsContainer extends Component {
       <DonationsCard {...donation} key={donation.id} />
     ));
     return (
-      <section className="donations-container">{displayDonations}</section>
+      <aside>
+        <h2 className="recent-donations">Recent Donations:</h2>
+        <section className="donations-container">{displayDonations}</section>
+      </aside>
     );
   }
 }
@@ -20,7 +23,7 @@ const mapStateToProps = state => ({
 });
 
 DonationsContainer.propTypes = {
-    donations: PropTypes.array
-}
+  donations: PropTypes.array
+};
 
 export default connect(mapStateToProps)(DonationsContainer);
