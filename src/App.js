@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./App.css";
+import { getAnimals } from "./apiCalls/apiCalls";
+import {
+  setAnimals,
+  addDonations,
+  setDonations,
+  loadComplete,
+  hasErrored
+} from "./actions/index";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    getAnimals()
+      .then(animals => this.props.setAnimals(animals))
+      .then(this.props.loadComplete())
+      .catch(error => hasErrored(error.message));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h2>Animal Rescue</h2>
+        </header>
+      </div>
+    );
+  }
 }
 
-export default App;
+export const mapStateToProps = state => ({
+  error: state.error,
+  isLoading: state.isLoading,
+  animals: state.animals,
+  donations: state.donations
+});
+
+export const mapDispatchToProps = dispatch => ({
+  setAnimals: animals => dispatch(setAnimals(animals)),
+  addDonations: donations => dispatch(addDonations(donations)),
+  setDonations: donations => dispatch(setDonations(donations)),
+  loadComplete: () => dispatch(loadComplete()),
+  hasErrored: errorMsg => dispatch(hasErrored(errorMsg))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
