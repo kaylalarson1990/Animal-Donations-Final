@@ -9,6 +9,7 @@ import {
   loadComplete,
   hasErrored
 } from "./actions/index";
+import AnimalContainer from './AnimalContainer/AnimalContainer';
 
 class App extends Component {
   componentDidMount() {
@@ -24,6 +25,9 @@ class App extends Component {
         <header className="App-header">
           <h2>Animal Rescue</h2>
         </header>
+        <main>
+          <AnimalContainer />
+        </main>
       </div>
     );
   }
